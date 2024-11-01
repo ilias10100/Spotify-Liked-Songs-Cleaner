@@ -7,12 +7,12 @@ Automated Song Removal: Remove any number of songs from your "Liked Songs" playl
 Batch Processing: Deletes songs in batches to prevent API rate limit issues.
 Error Handling: Pauses and retries when errors occur to ensure reliable operation.
 
-#Requirements
+# Requirements
 
 Spotipy: A lightweight Python library for the Spotify Web API.
 Spotify Developer Account: You will need to register a Spotify application to obtain client_id and client_secret for authentication.
 
-#Setup
+# Setup
 
 Clone the Repository:
 
@@ -35,19 +35,19 @@ Set Up Environment Variables: Create a .env file or add the following environmen
 *SPOTIPY_CLIENT_SECRET='your_client_secret'
 *SPOTIPY_REDIRECT_URI='http://localhost:8888/callback'
 
-#Usage
+# Usage
 
 Run the script to start removing songs from your "Liked Songs" playlist.
 python main.py
 You will be prompted to enter the number of songs you want to remove.
 
-#Code Explanation
+# Code Explanation
 
 setup_spotify(): Sets up the Spotify client with the necessary permissions (user-library-read and user-library-modify) to access and modify saved tracks.
 remove_liked_songs(sp, num_songs): Retrieves and deletes songs from your "Liked Songs" in batches. It uses current_user_saved_tracks to get the songs and current_user_saved_tracks_delete to remove them.
 main(): Handles user input, initializes the Spotify client, and calls the song removal function.
 
-#License
+# License
 
 This project is licensed under the MIT License. See LICENSE for more details.
 
