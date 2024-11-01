@@ -9,7 +9,7 @@ def setup_spotify():
     scope = "user-library-modify user-library-read"
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
         scope=scope,
-        client_id="write ur client",
+        client_id="write ur client id",
         client_secret="write ur client secret id",
         redirect_uri="http://localhost:8888/callback"
     ))
