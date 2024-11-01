@@ -25,15 +25,15 @@ pip install spotipy
 
 Create a Spotify App:
 
-*Go to Spotify Developer Dashboard.
-*Create a new app and note down the client_id and client_secret.
-*Set the Redirect URI to http://localhost:8888/callback.
+Go to Spotify Developer Dashboard.
+Create a new app and note down the client_id and client_secret.
+Set the Redirect URI to http://localhost:8888/callback.
 
 Set Up Environment Variables: Create a .env file or add the following environment variables with your credentials:
 
-*SPOTIPY_CLIENT_ID='your_client_id'
-*SPOTIPY_CLIENT_SECRET='your_client_secret'
-*SPOTIPY_REDIRECT_URI='http://localhost:8888/callback'
+SPOTIPY_CLIENT_ID='your_client_id'
+SPOTIPY_CLIENT_SECRET='your_client_secret'
+SPOTIPY_REDIRECT_URI='http://localhost:8888/callback'
 
 # Usage
 
@@ -44,14 +44,17 @@ You will be prompted to enter the number of songs you want to remove.
 # Code Explanation
 
 setup_spotify(): Sets up the Spotify client with the necessary permissions (user-library-read and user-library-modify) to access and modify saved tracks.
-remove_liked_songs(sp, num_songs): Retrieves and deletes songs from your "Liked Songs" in batches. It uses current_user_saved_tracks to get the songs and current_user_saved_tracks_delete to remove them.
+
+remove_liked_songs(sp, num_songs): Retrieves and deletes songs from your "Liked Songs" in batches.It uses current_user_saved_tracks to get the songs and current_user_saved_tracks_delete to remove them.
+
 main(): Handles user input, initializes the Spotify client, and calls the song removal function.
 
 # License
 
 This project is licensed under the MIT License. See LICENSE for more details.
 
-#Disclaimer
+# Disclaimer
+
 Use this tool responsibly. Removing songs is irreversible, so double-check your input to avoid deleting more songs than intended.
 
 
